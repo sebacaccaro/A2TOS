@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="it.unipd.tos.AppTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="it.unipd.tos.AppTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
     <property name="java.vm.version" value="25.171-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/sebastiano/Scrivania/TOS A2/A2TOS/restaurant-manager"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/sebastiano/Scrivania/TOS A2/A2TOS"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,8 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/sebastiano/Scrivania/TOS A2/A2TOS/restaurant-manager"/>
+    <property name="user.dir" value="/home/sebastiano/Scrivania/TOS A2/A2TOS"/>
+    <property name="checkstyle.skip" value="true"/>
     <property name="java.runtime.version" value="1.8.0_171-b11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
@@ -34,17 +35,17 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="4.15.0-42-generic"/>
     <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
-    <property name="user.home" value="/home/sebastiano"/>
+    <property name="user.home" value="/root"/>
     <property name="user.timezone" value="Europe/Rome"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="sebastiano"/>
+    <property name="user.name" value="root"/>
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -e"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -Dcheckstyle.skip"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="it"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -59,8 +60,7 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="it.unipd.tos.AppTest" name="testApp" time="0.009"/>
+  <testcase classname="it.unipd.tos.AppTest" name="testApp" time="0"/>
 </testsuite>
