@@ -16,16 +16,53 @@ import it.unipd.tos.model.MenuItem;
 public class RestaurantBillImplTest {
 
 	@Test
-	public void test() throws RestaurantBillException {
+	public void getOrderPriceStandardTest() {
 		List<MenuItem> conto = new ArrayList<MenuItem>();
 		RestaurantBillImpl cassa = new RestaurantBillImpl();
-		conto.add(new MenuItem("Margherita",23));
-		conto.add(new MenuItem("Margherita",24));
-		conto.add(new MenuItem("Margherita",2.5));
-		conto.add(new MenuItem("Margherita",3));
-		double totale = cassa.getOrderPrice(conto);
+		conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",23));
+		conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",24));
+        conto.add(new MenuItem(MenuItem.itemType.PRIMI,"Spaghetti",2.5));
+        conto.add(new MenuItem(MenuItem.itemType.PRIMI,"Verze",3));
+		double totale = 0;
+        try {
+            totale = cassa.getOrderPrice(conto);
+        } catch (RestaurantBillException e) {
+            e.printStackTrace();
+        }
 		assertEquals(totale, 52.5, 0.001);
 		
 	}
+	
+	@Test
+	public void getOrderPrice10PiuGratisTest() {
+	    List<MenuItem> conto = new ArrayList<MenuItem>();
+        RestaurantBillImpl cassa = new RestaurantBillImpl();
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",23));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",24));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",2.5));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",3));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",23));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",23));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",24));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",2.5));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",3));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",24));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",2.5));
+        conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",3));
+        conto.add(new MenuItem(MenuItem.itemType.PRIMI,"Spaghetti",2.5));
+        conto.add(new MenuItem(MenuItem.itemType.PRIMI,"Verze",3));
+        conto.add(new MenuItem(MenuItem.itemType.PRIMI,"Spaghetti",2.5));
+        conto.add(new MenuItem(MenuItem.itemType.PRIMI,"Verze",3));
+
+        double totale = 0;
+        try {
+            totale = cassa.getOrderPrice(conto);
+        } catch (RestaurantBillException e) {
+            e.printStackTrace();
+        }
+        assertEquals(totale, 166, 0.001);
+	}
+
+
 
 }
