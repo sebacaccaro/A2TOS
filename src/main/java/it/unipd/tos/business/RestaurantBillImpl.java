@@ -12,6 +12,9 @@ import it.unipd.tos.model.MenuItem;
 public class RestaurantBillImpl implements RestaurantBill{
 
     public double getOrderPrice(List<MenuItem> itemsOrdered) throws RestaurantBillException {
+        if (itemsOrdered.size() > 20) {
+            throw new RestaurantBillException();
+        }
         double final_price = itemsOrdered.stream().mapToDouble(MenuItem::getPrice).sum();
         int pizza_count = (int) itemsOrdered.stream().filter(x -> x.getDish().equals(MenuItem.itemType.PIZZE)).count();
         if (pizza_count > 10) {
