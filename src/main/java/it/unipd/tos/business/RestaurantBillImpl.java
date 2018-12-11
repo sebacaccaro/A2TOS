@@ -20,6 +20,9 @@ public class RestaurantBillImpl implements RestaurantBill{
                                  .mapToDouble(x -> x.getPrice())
                                  .min().getAsDouble();
         }
+        if (final_price > 100) {
+            final_price -= final_price/100.0*5.0;
+        }
         return final_price;
     }
 
