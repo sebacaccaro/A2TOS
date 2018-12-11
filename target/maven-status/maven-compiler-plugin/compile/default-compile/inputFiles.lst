@@ -1,5 +1,5 @@
-/home/sebastiano/Scrivania/TOS A2/A2TOS/src/main/java/it/unipd/tos/business/RestaurantBill.java
-/home/sebastiano/Scrivania/TOS A2/A2TOS/src/main/java/it/unipd/tos/model/MenuItem.java
-/home/sebastiano/Scrivania/TOS A2/A2TOS/src/main/java/it/unipd/tos/App.java
-/home/sebastiano/Scrivania/TOS A2/A2TOS/src/main/java/it/unipd/tos/business/RestaurantBillImpl.java
-/home/sebastiano/Scrivania/TOS A2/A2TOS/src/main/java/it/unipd/tos/business/exception/RestaurantBillException.java
+/home/seba/Scrivania/tos/A2TOS/src/main/java/it/unipd/tos/App.java
+/home/seba/Scrivania/tos/A2TOS/src/main/java/it/unipd/tos/business/exception/RestaurantBillException.java
+/home/seba/Scrivania/tos/A2TOS/src/main/java/it/unipd/tos/business/RestaurantBill.java
+/home/seba/Scrivania/tos/A2TOS/src/main/java/it/unipd/tos/model/MenuItem.java
+/home/seba/Scrivania/tos/A2TOS/src/main/java/it/unipd/tos/business/RestaurantBillImpl.java

@@ -5,7 +5,9 @@
 	<module name="FileLength">
 		<property name="max" value="1500" />
 	</module>
-	<module name="FileTabCharacter" />
+	<module name="FileTabCharacter">
+		<property name="eachLine" value="false" />
+	</module>
 	<module name="Header">
 		<property name="headerFile" value="java.header" />
 		<property name="fileExtensions" value="java" />
