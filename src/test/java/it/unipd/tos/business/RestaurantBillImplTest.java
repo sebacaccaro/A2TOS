@@ -16,7 +16,7 @@ import it.unipd.tos.model.MenuItem;
 public class RestaurantBillImplTest {
 
 	@Test
-	public void getOrderPriceStandardTest() {
+	public void getOrderPrice_Standard_Test() {
 		List<MenuItem> conto = new ArrayList<MenuItem>();
 		RestaurantBillImpl cassa = new RestaurantBillImpl();
 		conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",23));
@@ -34,7 +34,7 @@ public class RestaurantBillImplTest {
 	}
 	
 	@Test
-	public void getOrderPrice10PiuGratisTest() {
+	public void getOrderPrice_MoreThan10Pizzas_Test() {
 	    List<MenuItem> conto = new ArrayList<MenuItem>();
         RestaurantBillImpl cassa = new RestaurantBillImpl();
         conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",13));
@@ -65,7 +65,7 @@ public class RestaurantBillImplTest {
 	
 	
 	@Test
-	public void getOrderPriceMoreThan100Test() {
+	public void getOrderPrice_MoreThan100Euros_Test() {
 	    List<MenuItem> conto = new ArrayList<MenuItem>();
 	    RestaurantBillImpl cassa = new RestaurantBillImpl();
 	    conto.add(new MenuItem(MenuItem.itemType.PIZZE,"Margherita",13));
@@ -96,7 +96,7 @@ public class RestaurantBillImplTest {
 	
 	
 	@Test(expected = RestaurantBillException.class)
-	public void getOrderPriceMoreThan20Items() throws RestaurantBillException {
+	public void getOrderPrice_MoreThan20Items_Test() throws RestaurantBillException {
 	    List<MenuItem> conto = new ArrayList<MenuItem>();
 	    RestaurantBillImpl cassa = new RestaurantBillImpl();
 	    for(int i=1;i < 13;i++) {
